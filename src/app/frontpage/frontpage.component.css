@@ -1,0 +1,26 @@
+.myclass{
+
+    background-color:#cccccc ;
+    display: flex;
+    height: 100px;
+    min-width: 120px;
+    align-items: center;
+    color: #fff;
+    text-shadow: #000 0 0 .2em;
+   
+  }
+  .ccenter{  
+    text-align: center;
+  } 
+  
+    .mat-badge-content{
+      font-weight:900;font-size:42px;font-family:Roboto, "Helvetica Neue", sans-serif
+    }
+  
+    .spacer{
+      flex: auto;
+  
+    }
+    table {
+      width: 75%;
+    }

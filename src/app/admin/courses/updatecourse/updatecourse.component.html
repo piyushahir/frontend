@@ -1,0 +1,74 @@
+<mat-toolbar color="primary" class=mat-elevation-z8>
+    <div ngClass=spacer></div>
+    <h1>Courses-Faculty</h1>
+  </mat-toolbar>
+
+
+<div fxLayoutAlign="center center" fxFlexFill ngClass="main-div">
+    <mat-card fxFlex=25>
+        <mat-toolbar color="primary">Add Course & Faculty </mat-toolbar>
+        <form fxLayoutAlign="strech" fxLayout="column" ngClass=login-form (ngSubmit)="getValues(Course)">
+
+            <mat-form-field>
+             <input  matInput ngModel type="text" placeholder="Course name"  [(ngModel)]="Course.course_name" name="Name" required >
+            </mat-form-field>
+            
+          
+               <mat-form-field>
+                <input matInput ngModel type="number" placeholder="Batch size" [(ngModel)]="Course.batch_size" name="gender"  required >
+               </mat-form-field>
+
+
+               <mat-form-field>
+                <input matInput ngModel  type="number" placeholder="Fees" [(ngModel)]="Course.fees" name="qualification"  required >
+               </mat-form-field>
+                
+               <mat-form-field>
+                <input matInput ngModel type="date" placeholder="Start Date"  [(ngModel)]="Course.start_date"  name="date" required>
+               </mat-form-field>
+
+               <mat-form-field>
+                <input matInput ngModel type="date" placeholder="End Date"  [(ngModel)]="Course.end_date"  name="date" required>
+               </mat-form-field>
+
+               <!-- <mat-form-field>
+                <input  matInput ngModel placeholder="Faculty name"  [(ngModel)]="Course.faculty.faculty_name" name="Name"  required>
+               </mat-form-field>
+
+               <mat-form-field>
+                <input matInput ngModel type="phone" placeholder="Contact no" [(ngModel)]="Course.faculty.faculty_contact_no"  name="mobile" required >
+               </mat-form-field>
+
+           
+
+             <mat-form-field>
+                <input matInput ngModel type="textarea" placeholder="Faculty Address"  [(ngModel)]="Course.faculty.faculty_address"  name="address" >
+               </mat-form-field>
+             
+      -->
+              
+               
+            <button mat-raised-button type="submit">Update</button>
+
+          </form>
+          
+    </mat-card>
+</div>
+
+
+
+<!--<tr *ngFor="let item of Classes;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{item.teacher.fname}}&nbsp; {{item.teacher.lname}}</td>
+        <td>{{item.classname}}</td>
+        <td>{{item.subject}}</td>
+        <td>{{item.topic}}</td>
+        <td>{{item.class_date}}</td>
+        <td>{{item.class_Link}}</td> 
+        <td>
+        <button mat-raised-button type="submit" (click)="onDelete(i)">Delete</button>
+        </td>  
+        <td>
+        <button mat-raised-button type="submit" (click)="onUpdate(item.teacher_id)">Update</button>
+        </td>              
+    </tr>-->

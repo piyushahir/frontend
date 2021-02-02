@@ -1,0 +1,39 @@
+
+<div fxLayoutAlign="center center" fxFlexFill ngClass="main-div">
+    <mat-card fxFlex=25>
+        <mat-toolbar color="primary">Update Student</mat-toolbar>
+        <form fxLayoutAlign="strech" fxLayout="column" ngClass=login-form (ngSubmit)="getValues(Students)">
+
+            <mat-form-field>
+             <input  matInput ngModel placeholder="name"  [(ngModel)]="Students.student_name" name="Name"  >
+            </mat-form-field>
+            
+          
+            <mat-form-field>
+                <input matInput ngModel placeholder="gender" [(ngModel)]="Students.gender" name="gender"   >
+               </mat-form-field>
+
+               <mat-form-field>
+                <input matInput ngModel placeholder="Qualification" [(ngModel)]="Students.qualification" name="qualification"   >
+               </mat-form-field>
+
+               <mat-form-field>
+                <input matInput ngModel type="phone" placeholder="mobile" [(ngModel)]="Students.contact_no"  name="mobile" >
+               </mat-form-field>
+
+            <mat-form-field>
+                <input matInput ngModel type="email" placeholder="email"  [(ngModel)]="Students.email" name="email">
+             </mat-form-field>
+          
+
+             <mat-form-field>
+                <input matInput ngModel type="textarea" placeholder="Address"  [(ngModel)]="Students.student_address"  name="address" >
+               </mat-form-field>
+             
+               
+               
+            <button mat-raised-button type="submit">Update</button>
+
+          </form>
+          
+    </mat-card>

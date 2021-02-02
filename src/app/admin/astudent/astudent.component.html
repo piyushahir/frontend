@@ -1,0 +1,48 @@
+<mat-toolbar color="primary" class=mat-elevation-z8>
+ 
+    <div ngClass=spacer>
+        Manage Students
+    </div>
+    
+  </mat-toolbar>  
+
+
+  <table class="table">
+    <thead>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Sr No.</th>
+            <th> Name</th>
+            <th> Gender</th>
+            <th> Qualification</th>
+            <th> Email</th>
+            <th> Contact no</th>
+            <th> Address </th>
+            <!-- <th> Reg date </th>
+            <th> Payment </th> -->
+            
+            <th>    Action   </th>
+        </tr>
+        <tr *ngFor="let item of Student;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{item.student_name}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.qualification}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.contact_no}}</td>
+            <td>{{item.student_address}}</td>
+            <!-- <td>{{item.studentEnrolls.reg_date}}</td>
+            <td>{{item.studentEnrolls.payment}}</td> -->
+            
+            <td>
+            <button mat-raised-button type="submit" (click)="onDelete(item.student_id)">Delete</button>
+            </td> 
+            <td>
+              <button mat-raised-button type="submit" (click)="onUpdate(item.student_id)">Update</button>
+            </td>  
+                     
+        </tr>
+    </thead>
+    </table>

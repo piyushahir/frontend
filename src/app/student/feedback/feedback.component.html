@@ -1,0 +1,36 @@
+
+<div fxLayoutAlign="center center" fxFlexFill ngClass="main-div">
+    <mat-card fxFlex=25>
+        <mat-toolbar color="primary">Enrollment Feedback</mat-toolbar>
+        <form fxLayoutAlign="strech" fxLayout="column" ngClass=feedback-form (ngSubmit)="getValues()">
+
+            <mat-form-field>
+             <input matInput placeholder="Enrollment_Id" [(ngModel)]="this.enroll_id" name="id" required>
+            </mat-form-field>
+            
+            <mat-form-field >
+                <mat-label>Select Course</mat-label>
+                <mat-select [(value)]="this.rating" >
+                <mat-option>None</mat-option>
+                <mat-option value=1>1</mat-option >
+                    <mat-option value=2>2</mat-option >
+                        <mat-option value=3>3</mat-option >
+                            <mat-option value=4>4</mat-option >
+                                <mat-option value=5>5</mat-option >
+                </mat-select>
+               </mat-form-field >
+
+              
+             <mat-form-field>
+                <input matInput type="textarea" placeholder="Comment"  [(ngModel)]="this.comment" name="comment" required>
+               </mat-form-field>
+
+
+              
+            <button mat-raised-button type="submit">Submit</button>
+
+          </form>
+          
+    </mat-card>
+
+</div>

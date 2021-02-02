@@ -1,0 +1,95 @@
+
+  <mat-toolbar color="primary" class=mat-elevation-z8>
+    <div ngClass=spacer></div>
+    <h1>Courses-Faculty</h1>
+  </mat-toolbar>  
+
+  <table class="table">
+    <thead>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Sr No.</th>
+            <th>Course Name</th>
+            <th>Batch size</th>
+            <th>Fees</th>
+            <th>Start date</th>
+            <th>End Date</th>
+            <th>Faculty Name</th>
+            <th>Faculty contact no</th>
+            <th>Faculty Address</th>
+            <th>    Action   </th>
+        </tr>
+        <tr *ngFor="let item of Course;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{item.course_name}}</td>
+            <td>{{item.batch_size}}</td>
+            <td>{{item.fees}}</td>
+            <td>{{item.start_date}}</td>
+            <td>{{item.end_date}}</td>
+            <td>{{item.faculty.faculty_name}}</td>
+            <td>{{item.faculty.contact_no}}</td>
+            <td>{{item.faculty.address}}</td>
+            <td>
+              <button mat-raised-button type="submit" (click)="onUpdate(item.course_id)">Update</button>
+            </td>  
+            <td>
+              <button mat-raised-button type="submit" (click)="onDelete(item.course_id)">Delete</button>
+              </td>  
+              
+                     
+        </tr>
+    </thead>
+    </table>
+    
+  <div fxLayoutAlign="center center" fxFlexFill ngClass="main-div">
+    <mat-card fxFlex=25>
+        <mat-toolbar color="primary">Add Course & Faculty </mat-toolbar>
+        <form fxLayoutAlign="strech" fxLayout="column" ngClass=login-form (ngSubmit)="getValues()">
+
+            <mat-form-field>
+             <input  matInput ngModel type="text" placeholder="Course name"  [(ngModel)]="this.course_name" name="Name" required >
+            </mat-form-field>
+            
+          
+               <mat-form-field>
+                <input matInput ngModel type="number" placeholder="Batch size" [(ngModel)]="this.batch_size" name="gender"  required >
+               </mat-form-field>
+
+
+               <mat-form-field>
+                <input matInput ngModel  type="number" placeholder="Fees" [(ngModel)]="this.fees" name="qualification"  required >
+               </mat-form-field>
+                
+               <mat-form-field>
+                <input matInput ngModel type="date" placeholder="Start Date"  [(ngModel)]="this.start_date"  name="date" required>
+               </mat-form-field>
+
+               <mat-form-field>
+                <input matInput ngModel type="date" placeholder="End Date"  [(ngModel)]="this.end_date"  name="date" required>
+               </mat-form-field>
+
+               <mat-form-field>
+                <input  matInput ngModel placeholder="Faculty name"  [(ngModel)]="this.faculty_name" name="Name"  required>
+               </mat-form-field>
+
+               <mat-form-field>
+                <input matInput ngModel type="phone" placeholder="Contact no" [(ngModel)]="this.faculty_contact_no"  name="mobile" required >
+               </mat-form-field>
+
+           
+
+             <mat-form-field>
+                <input matInput ngModel type="textarea" placeholder="Faculty Address"  [(ngModel)]="this.faculty_address"  name="address" >
+               </mat-form-field>
+             
+     
+              
+               
+            <button mat-raised-button type="submit">Add</button>
+
+          </form>
+          
+    </mat-card>
+</div>

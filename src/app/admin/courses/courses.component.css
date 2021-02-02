@@ -1,0 +1,10 @@
+
+table {
+    width: 100%;
+  }
+.main-div mat-card{
+    padding:0px;
+}
+.login-form{
+    padding: 20px;
+}

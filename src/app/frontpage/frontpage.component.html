@@ -1,0 +1,55 @@
+<title>
+    CIMS
+  </title>
+ <mat-toolbar color="primary" class=mat-elevation-z8>
+   <span><mat-icon>eco</mat-icon>Aspire Institute!</span> 
+   <div ngClass=spacer></div>
+   <nav>
+    
+    <a mat-button routerLink="" >Home</a>
+    <a mat-button  routerLink="/register">Registrer</a>
+    <a mat-raised-button color=accent routerLink="/login">Sign in</a>
+  </nav>
+ </mat-toolbar>
+ <br>
+ <br>
+
+
+ 
+  <table class="table">
+  <thead>
+      <tr>
+          <td></td>
+      </tr>
+      <tr>
+          <th>Sr No.</th>
+          <th>Course Name</th>
+          <th>Start Date</th>
+          <th>    Action   </th>
+      </tr>
+      <tr *ngFor="let item of Course;let i=index">
+          <td>{{i+1}}</td>
+          <td>{{item.course_name}}</td>
+          <td>{{item.start_date}}</td>
+          <td>
+          <button mat-raised-button type="submit" routerLink="/register">Register</button>
+          </td>  
+                   
+      </tr>
+  </thead>
+  </table>
+  
+
+
+  <div  > 
+  <h4 > Address: Manek baugh Sinhgad road,pune
+  </h4> 
+  <h4> email: piyushahir43@gmail.com
+  </h4>
+  <h4>
+    contact no:8208031933
+  </h4>
+   
+</div>
+
+
